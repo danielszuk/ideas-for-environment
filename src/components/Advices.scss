@@ -1,0 +1,17 @@
+@import '../variables.scss';
+
+.advice {
+    width: 50%;
+}
+
+.advice-nav {
+    padding: 0;
+
+    background: none;
+    border: none;
+    color: $colorGrey;
+
+    &:focus {
+        outline: none;
+    }
+}
