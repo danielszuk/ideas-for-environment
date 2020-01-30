@@ -55,11 +55,11 @@ export const Advices: React.FC = () => {
     className="advice__background absolute top-0 left-0 w-100 h-100"
     style={{backgroundImage: `url("./advice-backgrounds/${getBackgroundSrc(getAdvice(activeAdviceId).tags[0])}")`}}/>
 
-    <div className="advice relative z-1 p-4 flex-column radius-solid">
-      <div className="advice__box-background absolute top-0 left-0 w-100 h-100 bg-background"></div>
+    <div className="advice relative z-1 p-4 flex-column">
+      <div className="advice__box-background absolute top-0 left-0 w-100 h-100 bg-background radius-1"></div>
 
       <div className="relative z-1">
-        <p className="left line-3">
+        <p className="left line-4 size-1 bold">
           {getAdvice(activeAdviceId).text[language]}
         </p>
         {/*<div className="flex">*/}
