@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import './atoms.scss';
+import './style/fractures.scss';
+import './style/atoms.scss';
 import { App } from './components/App';
 import * as serviceWorker from './serviceWorker';
 

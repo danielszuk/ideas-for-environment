@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap&subset=latin-ext');
 
-@import 'variables.scss';
+@import 'style/variables';
 
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  font-size: $size1;
+  font-size: $size0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: $colorBackground;
 }

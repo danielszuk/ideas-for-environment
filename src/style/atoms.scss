@@ -1,0 +1,27 @@
+@import "variables";
+
+// Overwrites
+// we never overflow the page in this case
+html { overflow-y: auto; }
+
+// Spacing
+.ml-a {
+  margin-left: auto;
+}
+
+// Fonts
+.size-0 {
+  font-size: $size0;
+}
+.line-3 {
+  line-height: 1.3em;
+}
+
+// Sizes
+.h-viewport-100 {
+  height: 100vh;
+}
+.radius-solid { border-radius: 1px; }
+
+// Colors
+.bg-background { background-color: $colorBackground; }

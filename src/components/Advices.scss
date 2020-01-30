@@ -1,7 +1,16 @@
-@import '../variables.scss';
+@import '../style/variables';
+
+.advice__background {
+    background-size: cover;
+    background-position: center center;
+}
 
 .advice {
-    width: 50%;
+    width: 600px;
+    max-width: 80%;
+}
+.advice__box-background {
+    opacity: 0.9;
 }
 
 .advice-nav {
@@ -9,7 +18,7 @@
 
     background: none;
     border: none;
-    color: $colorGrey;
+    color: $colorGray;
 
     &:focus {
         outline: none;

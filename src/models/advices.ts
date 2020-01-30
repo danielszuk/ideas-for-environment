@@ -10,7 +10,7 @@ export interface IAdvice {
   text: Ii18n,
   tags: Tag[]
 }
-export type Tag = "device" | "water" | "land" | "car" | "lifestyle" | "energy" | "household";
+export type Tag = "device" | "water" | "car" | "lifestyle" | "household";
 export const advices: IAdvice[] = [
   {
     text: {
@@ -38,7 +38,7 @@ export const advices: IAdvice[] = [
   },
   {
     text: {
-      [Language.en]: `Keep your phone / laptop temperature just right. Avoid prolonged video watching and game playing, when you feel that your device is hot for a longer time, take a break and let the device cool down.`,
+      [Language.en]: `Keep your phone / laptop temperature just right. Avoid prolonged video watching and game playing. When you feel that your device is hot for a longer time, take a break and let the device cool down.`,
       [Language.hu]: `Tartsd normál hőmérsékleten a telefonod / laptopod. Kerüld a hosszan tartó videónézéseket és játékoket, amikor érzed hogy már hosszabb ideje forró a telefonod / laptopod, tarts szünetet és hagyd hogy lehűljön.`
     },
     id: 4,
@@ -178,6 +178,6 @@ export const advices: IAdvice[] = [
       [Language.hu]: `Télen fizetsz az energiáért, amivel felfűtöd a környezeted. Ha a forró tárgyakat ügyesen használod, kevesebb energiára lesz szükséged: Ne ereszd le a forralt vizet rögtön használat után (pl. fürdés vagy főzés után), hagyd hogy kihűljön először.`
     },
     id: 21,
-    tags: ["energy"]
+    tags: ["household"]
   }
 ];

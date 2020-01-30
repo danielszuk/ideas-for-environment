@@ -8,7 +8,7 @@ export const App: React.FC = () => {
   return (
     <LanguageContext.Provider value={Language.en}>
 
-      <div className="App h-viewport-100 flex flex-center">
+      <div className="App h-viewport-100">
         <Advices/>
       </div>
 
