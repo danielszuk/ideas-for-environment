@@ -1,4 +1,4 @@
-import {Language} from "../models/languages";
+import {Languages} from "../models/languages";
 import React from "react";
 
-export const LanguageContext = React.createContext(Language.en);
+export const LanguageContext = React.createContext(Languages.en);

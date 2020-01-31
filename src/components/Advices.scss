@@ -12,15 +12,3 @@
 .advice__box-background {
     opacity: 0.8;
 }
-
-.advice-nav {
-    padding: 0;
-
-    background: none;
-    border: none;
-    color: $colorGray;
-
-    &:focus {
-        outline: none;
-    }
-}
