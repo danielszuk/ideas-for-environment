@@ -13,10 +13,6 @@ export const Advices: React.FC = () => {
     (async () => {
       // load history from storage
       let alreadyActivatedAdviceIds = await storageGet<number[]>(StorageKey.alreadyActivatedAdviceIds) || [];
-      // If we already displayed all the advices, start it again
-      if (alreadyActivatedAdviceIds.length === advices.length) {
-        alreadyActivatedAdviceIds = [];
-      }
       // if there is a last advice, force the new advice from an other tag
       let lastAdviceTag: Tag | undefined;
       if (alreadyActivatedAdviceIds.length) {
@@ -24,7 +20,14 @@ export const Advices: React.FC = () => {
         lastAdviceTag = lastAdvice.tags[0];
       }
 
-      let advice = getAdvice(getRandomAdviceId(alreadyActivatedAdviceIds, lastAdviceTag));
+      let randomAdviceId = getRandomAdviceId(alreadyActivatedAdviceIds, lastAdviceTag);
+      // If there is no advice to display (we displayed all, all we can't display an other with different Tag)
+      // start it again
+      if (randomAdviceId === undefined) {
+        alreadyActivatedAdviceIds = [];
+        randomAdviceId = getRandomAdviceId(alreadyActivatedAdviceIds, lastAdviceTag);
+      }
+      const advice = getAdvice(randomAdviceId!);
       setActiveAdvice(advice);
 
       // save new advice to history
@@ -52,9 +55,10 @@ export const Advices: React.FC = () => {
   </div> : <></>;
 };
 
-const getRandomAdviceId = (exceptIds: number[], exceptWithTag?: Tag): number => {
+const getRandomAdviceId = (exceptIds: number[], exceptWithTag?: Tag): number | undefined => {
   const filteredAdvices = advices.filter(advice => !exceptIds.includes(advice.id) && (!exceptWithTag || !advice.tags.includes(exceptWithTag)));
-  return filteredAdvices[Math.floor(Math.random()*filteredAdvices.length)].id;
+  const randomAdvice = filteredAdvices[Math.floor(Math.random()*filteredAdvices.length)];
+  return randomAdvice ? randomAdvice.id : undefined;
 };
 
 const getAdvice = (id: number): IAdvice => {
