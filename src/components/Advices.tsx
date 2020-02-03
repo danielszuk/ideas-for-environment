@@ -6,7 +6,7 @@ import {adviceBackgrounds} from "../models/advice-backgrounds";
 import {StorageKey} from "../models/storage-keys";
 import {storageGet, storageSet} from "../storage";
 
-export const Advices: React.FC = () => {
+export const Advices: React.FC<{onBackgroundLoad: () => void}> = ({ onBackgroundLoad }) => {
   const [activeAdvice, setActiveAdvice] = useState<IAdvice | undefined>(undefined);
 
   useEffect(() => {
@@ -40,8 +40,9 @@ export const Advices: React.FC = () => {
 
   return activeAdvice ? <div className="advice__container relative h-100 w-100 flex flex-center">
     <div
-    className="advice__background absolute top-0 left-0 w-100 h-100"
-    style={{backgroundImage: `url("./advice-backgrounds/${getBackgroundSrc(activeAdvice.tags[0])}")`}}/>
+    className="absolute top-0 left-0 w-100 h-100 flex flex-center overflow-hidden">
+      <img className="advice__background" src={`./advice-backgrounds/${getBackgroundSrc(activeAdvice.tags[0])}`} onLoad={onBackgroundLoad} alt="" />
+    </div>
 
     <div className="advice relative z-1 p-4 flex-column">
       <div className="advice__box-background absolute top-0 left-0 w-100 h-100 bg-background radius-1"/>

@@ -1,8 +1,8 @@
 @import '../style/variables';
 
 .advice__background {
-    background-size: cover;
-    background-position: center center;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .advice {
