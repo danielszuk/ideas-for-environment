@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Ideas for Environment",
   "version": "1.0.0",
-  "description": "Short advices, help you protect our environment.",
+  "description": "Practical advices for environment protection",
   "content_security_policy": "script-src 'self' 'sha256-...<read from console>'; object-src 'self'",
   "permissions": [
     "storage"
