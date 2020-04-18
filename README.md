@@ -1,3 +1,11 @@
+## Ideas for Environment
+A chrome extension, shows practical advices for environment protection.
+
+In Google Chrome, when the user open a new tab, they will see a short, practial advice for protect our environment and makes them feel better about our future.
+[Install and try from chrome web store](https://chrome.google.com/webstore/detail/ideas-for-environment/oplmeeglcbjompeobmglgceommjlgplm)
+
+## Bootsrap
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
